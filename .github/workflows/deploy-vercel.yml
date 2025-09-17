@@ -3,7 +3,7 @@ name: Deploy React App to Vercel
 on:
   pull_request:
     branches:
-      - develop
+      - preview
       - master
 
 jobs:
