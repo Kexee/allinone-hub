@@ -13,6 +13,7 @@ import {
   Tag
 } from "lucide-react";
 import { useState } from "react";
+import { ModeToggle } from "@/components/mode-toggle";
 
 const navigationItems = [
   { icon: MessageSquare, label: "Conversations", active: true },
@@ -117,9 +118,28 @@ export function Sidebar() {
         </div>
       )}
 
+      {/* Theme Toggle */}
+      {!collapsed && (
+        <div className="bottom-16 left-4 right-4">
+          <ModeToggle />
+        </div>
+      )}
+
+      {/* Collapse Toggle */}
+      <Button
+        variant="ghost"
+        size="sm"
+        onClick={() => setCollapsed(!collapsed)}
+        className="bottom-20 right-2 w-8 h-8 p-0 text-sidebar-foreground/60 hover:text-sidebar-foreground hover:bg-sidebar-accent"
+      >
+        <div className={cn("transition-transform", collapsed && "rotate-180")}>
+          ←
+        </div>
+      </Button>
+
       {/* Language Selector */}
       {!collapsed && (
-        <div className="absolute bottom-4 left-4 right-4">
+        <div className="px-2 bottom-4 left-4 right-4">
           <Button
             variant="ghost"
             size="sm"
@@ -130,18 +150,6 @@ export function Sidebar() {
           </Button>
         </div>
       )}
-
-      {/* Collapse Toggle */}
-      <Button
-        variant="ghost"
-        size="sm"
-        onClick={() => setCollapsed(!collapsed)}
-        className="absolute bottom-20 right-2 w-8 h-8 p-0 text-sidebar-foreground/60 hover:text-sidebar-foreground hover:bg-sidebar-accent"
-      >
-        <div className={cn("transition-transform", collapsed && "rotate-180")}>
-          ←
-        </div>
-      </Button>
     </div>
   );
 }
