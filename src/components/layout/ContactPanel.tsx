@@ -7,13 +7,13 @@ import {
   Phone,
   MapPin,
   Globe,
-  Calendar,
+  // Calendar,
   User,
   Building,
   Plus,
   Edit,
   MessageSquare,
-  FileText,
+  // FileText,
   Clock,
   Star
 } from "lucide-react";

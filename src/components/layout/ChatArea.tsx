@@ -1,18 +1,18 @@
 import { useState } from "react";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { cn } from "@/lib/utils";
+// import { Badge } from "@/components/ui/badge";
+// import { cn } from "@/lib/utils";
 import { 
   MoreHorizontal, 
   Info, 
-  Archive, 
-  UserPlus,
-  Paperclip,
-  Mic,
-  Send,
-  Smile,
-  Languages,
+  // Archive, 
+  // UserPlus,
+  // Paperclip,
+  // Mic,
+  // Send,
+  // Smile,
+  // Languages,
   Bot,
   Phone,
   Video,

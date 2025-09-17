@@ -23,7 +23,7 @@ interface ChatMessageProps {
 export function ChatMessage({ message }: ChatMessageProps) {
   const isUser = message.sender.type === 'user';
   const isSystem = message.sender.type === 'system';
-  const isAgent = message.sender.type === 'agent';
+  // const isAgent = message.sender.type === 'agent';
 
   if (isSystem) {
     return (
